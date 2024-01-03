@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="box">
+        <div class="content">
+            <div class="input">
+                <input type="tex" name="display" readonly>
+            </div>
+            <div class="buttons">
+                <div class="first">
+                    <button onclick="button7();" value="7">7</button>
+                    <button onclick="button8();" value="8">8</button>
+                    <button onclick="button9();" value="9">9</button>
+                    <button onclick="buttonm();" value="*">*</button>
+                </div>
+                <div class="second">
+                    <button onclick="button4();" value="4">4</button>
+                    <button onclick="button5();" value="5">5</button>
+                    <button onclick="button6();" value="6">6</button>
+                    <button onclick="buttonmin();" value="-">-</button>
+                </div>
+                <div class="third">
+                    <button onclick="button1();" value="1">1</button>
+                    <button onclick="button2();" value="2">2</button>
+                    <button onclick="button3();" value="3">3</button>
+                    <button onclick="buttonp();" value="+">+</button>
+                </div>
+                <div class="fourth">
+                    <button onclick="buttond();" value="/">/</button>
+                    <button onclick="button0();" value="0">0</button>
+                    <button onclick="display.value += '.'" value=".">.</button>
+                    <button onclick=" equal(); " value="=">=</button>
+                </div>
+                <button value="00" onclick="display.value += '00'">00</button>
+                <button value="AC" onclick="display.value = '' ">AC</button>
+                <button class="bc" value="BC" onclick="display.value = display.value.toString().slice(0,-1)">BC</button>
+                <button id="percent" onclick="percent();" value="%">%</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
